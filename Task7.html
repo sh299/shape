@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformation</title>
+    <style>
+        body{
+            background-color: rgba(128, 224, 241, 0.457);
+        }
+        .circle{
+            height: 100px;
+            width: 100px;
+            border: 2px solid black;
+            border-radius: 50%;
+            transition:all 0.5s;
+        }
+        .circle:hover{
+            transform: translateX(200px);
+            background-color: aquamarine;
+        }
+        .box{
+            height: 50px;
+            width: 30px;
+            border: 2px solid palevioletred;
+            margin: 5px;
+            /* animation-name: shraddha;
+            animation-duration: 2s;
+            animation-iteration-count:infinite;
+            animation-timing-function: ease; */
+            /* animation: shraddha 2s infinite ease; */
+            background-color: lightpink;
+        }
+
+        #box1{animation: shraddha 3s infinite ease-in-out;}
+        #box2{animation: shraddha 3s infinite ease-in;}
+        #box3{animation: shraddha 3s infinite ease-out;}
+
+        @keyframes shraddha{
+            from{
+                width: 100px;
+            }
+            to{
+                width: 300px;
+            }
+        }
+       .shape{
+        width: 0;
+        height: 0;
+        border-left: 50px solid transparent; 
+        border-right: 50px solid transparent; 
+        border-bottom: 100px solid #e7ec6e; 
+       }
+      .shape:hover{
+        
+        transform: translateX(200px);
+      }
+
+      .pentagon {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      background-color: #ffff00; /* Yellow */
+      }
+
+      .pentagon:before {
+       content: '';
+       position: absolute;
+       top: 0;
+       left: 50%;
+       width: 0;
+       height: 0;
+       border-left: 50px solid transparent;
+       border-right: 50px solid transparent;
+       border-bottom: 86.6px solid #6697df; 
+   
+       }
+       div {
+  width: 300px;
+  height: 100px;
+  background-color: rgb(101, 235, 78);
+  border: 1px solid black;
+}
+
+div#myDiv {
+  transform: rotate(20deg);
+}
+
+    </style>
+</head>
+<body>
+    <div class="circle"></div><br>
+     <div class="box" id="box1"></div>
+     <div class="box" id="box2"></div>
+     <div class="box" id="box3"></div>
+     <div class="shape" id="triangle"></div><br>
+     <div class="pentagon"></div> <br>
+     <div>Box1</div>
+    <div id="myDiv">Box2</div>
+</body>
+</html>
